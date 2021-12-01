@@ -1,0 +1,20 @@
+To run the Hotel Reservation System:
+
+> Open the command prompt on your computer
+> Change the current working directory to the directory in which your files are stored
+
+> Compile the java code using the following command:
+  javac filename.java (BookingMenu)
+
+> If the file has no errors, this will work fine. Otherwise, you will have to fix the errors before trying this command again.
+
+> Run the java code using the following command:
+  java filename (BookingMenu)
+  
+> Follow the on-screen prompts
+
+** To be noted **
+BookingMenu.java is the file where the main method is
+This is the class file in which you should run.
+Please ensure that you keep the CSV files the way they are and don't alter the.
+If they're edited in any way this will prevent the program from working causing a malfunction.
