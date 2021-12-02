@@ -1,10 +1,10 @@
 /** Java file : Hotel.java
-Team 10:
-Labhaoise Mullins (20266928)
-Aoife Kennedy (20267746)
-Gabriela Lyko (20226705)
-Kate Hickey (20266553)
-*/
+        Team 10:
+        Labhaoise Mullins (20266928)
+        Aoife Kennedy (20267746)
+        Gabriela Lyko (20226705)
+        Kate Hickey (20266553)
+        */
 
 /**
  *  Hotel class reads the csv and adds the info to an array list.
@@ -23,6 +23,13 @@ public class Hotel {
     private int fri;
     private int sat;
     private int sun;
+
+    /**
+     * Linked to accounting
+     * the arrays that were created from the CSV file in accounting are used to create Hotel Objects
+     * the data in the arrays are assigned to variables that would be useful in pricing system
+     * @param hotelInfo
+     */
 
     public Hotel(String[] hotelInfo) {
         this.hotelType = hotelInfo[0];
