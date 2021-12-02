@@ -1,13 +1,13 @@
 /** Java file : Accounting.java
-Team 10:
-Labhaoise Mullins (20266928)
-Aoife Kennedy (20267746)
-Gabriela Lyko (20226705)
-Kate Hickey (20266553)
-*/
+ Team 10:
+ Labhaoise Mullins (20266928)
+ Aoife Kennedy (20267746)
+ Gabriela Lyko (20226705)
+ Kate Hickey (20266553)
+ */
 
 /** Reads text from a character-input, buffering them to provide efficient reading of characters, arrays and lines */
-import java.io.BufferedReader; 
+import java.io.BufferedReader;
 
 /** Signals that an attempt to open the file denoted by a specified pathname has failed */
 import java.io.FileNotFoundException;
@@ -25,22 +25,29 @@ import java.util.ArrayList;
 public class Accounting {
     private ArrayList<Hotel> hotels;
 
+
     public Accounting() {
         this.hotels = ReadCSV();
     }
 
-private ArrayList<Hotel> ReadCSV() {
-    ArrayList<Hotel> hotels = new ArrayList<Hotel>();
-    String file = "./l4hotels.csv";
+    /**
+     * Reads the l4hotels.csv file and takes the data into an array.
+     * This array is then used to make a Hotel object
+     * Hotel object is stored in an arraylist of Hotel objecs
+     * @return
+     */
+    private ArrayList<Hotel> ReadCSV() {
+        ArrayList<Hotel> hotels = new ArrayList<Hotel>();
+        String file = "./l4hotels.csv";
 
-  BufferedReader reader;
-    try {
-          String currentLine;
-          boolean headerRead = false;
+        BufferedReader reader;
+        try {
+            String currentLine;
+            boolean headerRead = false;
 
-          reader = new BufferedReader(new FileReader(file));
+            reader = new BufferedReader(new FileReader(file));
 
-          while ((currentLine = reader.readLine()) != null) {
+            while ((currentLine = reader.readLine()) != null) {
                 if (headerRead) {
                     currentLine = currentLine.strip();
                     String[] info = currentLine.split(",");
@@ -52,7 +59,7 @@ private ArrayList<Hotel> ReadCSV() {
                 } else {
                     headerRead = true;
                 }
-           }
+            }
             reader.close();
 
         } catch (FileNotFoundException e) {
@@ -63,4 +70,5 @@ private ArrayList<Hotel> ReadCSV() {
 
         return hotels;
     }
+
 }
