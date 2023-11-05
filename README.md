@@ -1,5 +1,6 @@
 # CS4013 Software Development Project
-This is our GitHub repository for the CS4013 Software Development Group Project.
+This is our GitHub repository for the CS4013 Software Development Group Project.  
+- Hotel Reservation System
 
 Gabriela Lyko (20226705)  
 Labhaoise Mullins (20266928)  
